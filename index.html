@@ -6,6 +6,7 @@
     <title>Nilesh Vernekar - iOS Developer</title>
     <meta name="description" content="Seasoned iOS Developer with 6+ years of experience in Swift, SwiftUI, and mobile app development.">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="bento-styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
@@ -21,8 +22,8 @@
             <ul class="nav-menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#blog">Blog</a></li>
             </ul>
             <a href="#contact" class="btn-book">Book a Call</a>
@@ -45,6 +46,11 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <!-- Globe Container -->
+        <div class="globe-container">
+            <canvas id="globe-canvas"></canvas>
+        </div>
+
         <div class="container">
             <div class="hero-content">
                 <div class="upcoming-badge">
@@ -61,9 +67,10 @@
                 </h1>
 
                 <div class="hero-intro">
-                    <span class="hello-text">Hello, I'm Nilesh Vernekar</span>
-                    <img src="images/profile.jpg" alt="Nilesh Vernekar" class="hero-avatar">
-                    <span class="role-text">a Seasoned iOS Developer</span>
+                    <h2 class="simple-intro">
+                        Hello, I'm Nilesh Vernekar
+                        <span class="intro-subtitle">a Seasoned iOS Developer</span>
+                    </h2>
                 </div>
 
                 <div class="hero-cta">
@@ -81,6 +88,10 @@
                         <span>nilesh.vernekar11@gmail.com</span>
                     </button>
                 </div>
+
+                <div class="hero-profile-image-container">
+                    <img src="images/profile-old.jpg" alt="Nilesh Vernekar" class="hero-profile-image">
+                </div>
             </div>
         </div>
     </section>
@@ -95,18 +106,30 @@
             <div class="about-content">
                 <div class="about-text">
                     <p class="large-text">
-                        I'm a passionate iOS developer who transforms complex ideas into elegant, user-friendly mobile applications.
+                        Senior iOS Developer specializing in AI-native mobile experiences. Expert in integrating Apple Intelligence and Foundation Models for privacy-focused on-device processing. Proven track record of bridging Swift Structured Concurrency with cloud LLMs to deliver low-latency, context-aware applications using RAG architectures.
                     </p>
                     <p>
                         With over 6 years of experience in mobile development, I've had the privilege of working with industry leaders
                         like <strong>Verizon</strong> and <strong>Siemens</strong>, developing innovative solutions that have reached
                         over 2 million users worldwide.
                     </p>
-                    <p>
-                        My expertise spans across Swift, SwiftUI, UIKit, and modern iOS architectures like MVVM and Clean Swift.
-                        I'm particularly passionate about creating intuitive user interfaces, optimizing app performance, and
-                        implementing cutting-edge technologies like ARKit and Core Bluetooth.
-                    </p>
+
+                    <div class="technical-skills">
+                        <h3 class="skills-heading">Core Technical Skills</h3>
+                        <div class="skills-category">
+                            <strong>Core iOS:</strong> Swift 6, SwiftUI, Combine, Swift Structured Concurrency (Async/Await), UIKit, MVVM, Clean Swift
+                        </div>
+                        <div class="skills-category">
+                            <strong>AI & ML (Native):</strong> Apple Intelligence, Foundation Models Framework, Core ML, Vision Framework, App Intents, SiriKit
+                        </div>
+                        <div class="skills-category">
+                            <strong>AI Integration:</strong> LLM Integration (OpenAI/Gemini API), Function Calling/Tool Use, Prompt Engineering, RAG (Retrieval-Augmented Generation), Vector Databases (SQLite/SwiftData)
+                        </div>
+                        <div class="skills-category">
+                            <strong>Advanced Technologies:</strong> ARKit, Core Bluetooth, Performance Optimization, AsyncThrowingStream, Guided Generation
+                        </div>
+                    </div>
+
                     <p>
                         When I'm not coding, I'm exploring new iOS frameworks, contributing to the developer community,
                         and staying up-to-date with the latest Apple technologies.
@@ -133,6 +156,421 @@
         </div>
     </section>
 
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Featured Projects</span>
+                <h2 class="section-title">Applications that make a difference</h2>
+            </div>
+
+            <!-- 3-Phone Mockup Showcases -->
+            <div class="phone-mockup-showcases">
+                <!-- Verizon Protect Mockup -->
+                <div class="phone-mockup-card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                    <div class="mockup-banner">
+                        <div class="banner-content">
+                            <h2>Verizon Protect</h2>
+                            <p>An intuitive mobile companion for enterprise-grade security with VPN protection and dark web monitoring</p>
+                        </div>
+                        <div class="phone-stack">
+                            <div class="phone-mockup phone-left">
+                                <img src="images/apps/verizon-protect/screenshot-1.jpg" alt="Verizon Protect Screen 1">
+                            </div>
+                            <div class="phone-mockup phone-center">
+                                <img src="images/apps/verizon-protect/screenshot-2.jpg" alt="Verizon Protect Screen 2">
+                            </div>
+                            <div class="phone-mockup phone-right">
+                                <img src="images/apps/verizon-protect/screenshot-3.jpg" alt="Verizon Protect Screen 3">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mockup-details">
+                        <div class="detail-header-with-logo">
+                            <img src="https://logo.clearbit.com/verizon.com" alt="Verizon" class="company-logo" onerror="this.style.display='none'">
+                            <div>
+                                <h3>Verizon Protect</h3>
+                                <p class="detail-category">• SECURITY & VPN</p>
+                            </div>
+                        </div>
+                        <p class="detail-desc">Enterprise-grade security suite with VPN protection, dark web monitoring, and identity restoration for 2M+ users. Led the development of AI-powered features including hybrid on-device and cloud LLM integration.</p>
+
+                        <div class="detail-metrics">
+                            <span class="metric">⭐ 4.7</span>
+                            <span class="metric">43.8K Reviews</span>
+                            <span class="metric">Senior iOS Engineer</span>
+                        </div>
+                        <div class="detail-tags">
+                            <span>Swift</span>
+                            <span>SwiftUI</span>
+                            <span>Network Extension</span>
+                            <span>MVVM</span>
+                            <span>AI Integration</span>
+                            <span>Security</span>
+                        </div>
+                        <a href="https://apps.apple.com/us/app/verizon-protect/id1453880000" target="_blank" class="detail-app-store-btn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 22C7.79 22.05 6.8 20.68 5.96 19.47C4.25 17 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5M13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/>
+                            </svg>
+                            View on App Store
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hear.com Horizon Mockup -->
+                <div class="phone-mockup-card" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                    <div class="mockup-banner">
+                        <div class="banner-content">
+                            <h2>Hear.com Horizon</h2>
+                            <p>Control hearing aids with personalized sound adjustments and TeleCare support for enhanced health tracking</p>
+                        </div>
+                        <div class="phone-stack">
+                            <div class="phone-mockup phone-left">
+                                <img src="images/apps/hear-com/screenshot-1.jpg" alt="Hear.com Screen 1">
+                            </div>
+                            <div class="phone-mockup phone-center">
+                                <img src="images/apps/hear-com/screenshot-2.jpg" alt="Hear.com Screen 2">
+                            </div>
+                            <div class="phone-mockup phone-right">
+                                <img src="images/apps/hear-com/screenshot-3.jpg" alt="Hear.com Screen 3">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mockup-details">
+                        <div class="detail-header-with-logo">
+                            <img src="https://logo.clearbit.com/hear.com" alt="Hear.com" class="company-logo" onerror="this.style.display='none'">
+                            <div>
+                                <h3>Hear.com Horizon</h3>
+                                <p class="detail-category">• MEDICAL & HEALTH</p>
+                            </div>
+                        </div>
+                        <p class="detail-desc">Control Horizon hearing aids with personalized sound adjustments, TeleCare support, and health tracking integration.</p>
+                        <div class="detail-metrics">
+                            <span class="metric">⭐ 4.3</span>
+                            <span class="metric">Medical Device</span>
+                            <span class="metric">iOS Engineer</span>
+                        </div>
+                        <div class="detail-tags">
+                            <span>Swift</span>
+                            <span>Core Bluetooth</span>
+                            <span>HealthKit</span>
+                            <span>SDK</span>
+                        </div>
+                        <a href="https://apps.apple.com/us/app/hear-com-horizon/id1527081287" target="_blank" class="detail-app-store-btn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 22C7.79 22.05 6.8 20.68 5.96 19.47C4.25 17 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5M13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/>
+                            </svg>
+                            View on App Store
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Club Apparel Mockup -->
+                <div class="phone-mockup-card" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                    <div class="mockup-banner">
+                        <div class="banner-content">
+                            <h2>Club Apparel</h2>
+                            <p>Premium retail experience with personalized offers, digital invoices, and seamless gift card management</p>
+                        </div>
+                        <div class="phone-stack">
+                            <div class="phone-mockup phone-left">
+                                <img src="images/apps/club-apparel/screenshot-1.jpg" alt="Club Apparel Screen 1">
+                            </div>
+                            <div class="phone-mockup phone-center">
+                                <img src="images/apps/club-apparel/screenshot-2.jpg" alt="Club Apparel Screen 2">
+                            </div>
+                            <div class="phone-mockup phone-right">
+                                <img src="images/apps/club-apparel/screenshot-3.jpg" alt="Club Apparel Screen 3">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mockup-details">
+                        <div class="detail-header-with-logo">
+                            <img src="https://logo.clearbit.com/apparel.ae" alt="Club Apparel" class="company-logo" onerror="this.style.display='none'">
+                            <div>
+                                <h3>Club Apparel</h3>
+                                <p class="detail-category">• SHOPPING & LOYALTY</p>
+                            </div>
+                        </div>
+                        <p class="detail-desc">GCC's most rewarding loyalty program featuring 75+ brands across 1,750+ stores with personalized coupons and digital receipts.</p>
+                        <div class="detail-metrics">
+                            <span class="metric">⭐ 4.8</span>
+                            <span class="metric">10K+ Downloads</span>
+                            <span class="metric">iOS Developer</span>
+                        </div>
+                        <div class="detail-tags">
+                            <span>Swift</span>
+                            <span>MVVM</span>
+                            <span>Payment SDK</span>
+                            <span>Wallet</span>
+                        </div>
+                        <a href="https://apps.apple.com/ae/app/club-apparel/id1453453617" target="_blank" class="detail-app-store-btn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 22C7.79 22.05 6.8 20.68 5.96 19.47C4.25 17 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5M13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/>
+                            </svg>
+                            View on App Store
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tim Hortons Mockup -->
+                <div class="phone-mockup-card" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                    <div class="mockup-banner">
+                        <div class="banner-content">
+                            <h2>Tim Hortons</h2>
+                            <p>Canada's beloved coffee chain app with mobile ordering and loyalty rewards</p>
+                        </div>
+                        <div class="phone-stack">
+                            <div class="phone-mockup phone-left">
+                                <img src="images/apps/tim-hortons/screenshot-1.jpg" alt="Tim Hortons Screenshot 1">
+                            </div>
+                            <div class="phone-mockup phone-center">
+                                <img src="images/apps/tim-hortons/screenshot-2.jpg" alt="Tim Hortons Screenshot 2">
+                            </div>
+                            <div class="phone-mockup phone-right">
+                                <img src="images/apps/tim-hortons/screenshot-3.jpg" alt="Tim Hortons Screenshot 3">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mockup-details">
+                        <div class="detail-header-with-logo">
+                            <img src="https://logo.clearbit.com/timhortons.com" alt="Tim Hortons" class="company-logo" onerror="this.style.display='none'">
+                            <div>
+                                <h3>Tim Hortons</h3>
+                                <p class="detail-category">• FOOD & DRINK</p>
+                            </div>
+                        </div>
+                        <p class="detail-desc">Mobile ordering platform with rewards program and personalized offers for Canada's favorite coffee chain.</p>
+                        <div class="detail-metrics">
+                            <span class="metric">⭐ 4.8</span>
+                            <span class="metric">15M+ Downloads</span>
+                            <span class="metric">iOS Engineer</span>
+                        </div>
+                        <div class="detail-tags">
+                            <span>Swift</span>
+                            <span>Mobile Ordering</span>
+                            <span>Loyalty Program</span>
+                            <span>Payment Integration</span>
+                        </div>
+                        <a href="https://apps.apple.com/app/tim-hortons/id1143883086" target="_blank" class="detail-app-store-btn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 22C7.79 22.05 6.8 20.68 5.96 19.47C4.25 17 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5M13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/>
+                            </svg>
+                            View on App Store
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Starbucks Mockup -->
+                <div class="phone-mockup-card" style="background: linear-gradient(135deg, #00704a 0%, #00382a 100%);">
+                    <div class="mockup-banner">
+                        <div class="banner-content">
+                            <h2>Starbucks</h2>
+                            <p>The ultimate coffee ordering and rewards experience</p>
+                        </div>
+                        <div class="phone-stack">
+                            <div class="phone-mockup phone-left">
+                                <img src="images/apps/starbucks/screenshot-1.jpg" alt="Starbucks Screenshot 1">
+                            </div>
+                            <div class="phone-mockup phone-center">
+                                <img src="images/apps/starbucks/screenshot-2.jpg" alt="Starbucks Screenshot 2">
+                            </div>
+                            <div class="phone-mockup phone-right">
+                                <img src="images/apps/starbucks/screenshot-3.jpg" alt="Starbucks Screenshot 3">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mockup-details">
+                        <div class="detail-header-with-logo">
+                            <img src="https://logo.clearbit.com/starbucks.com" alt="Starbucks" class="company-logo" onerror="this.style.display='none'">
+                            <div>
+                                <h3>Starbucks</h3>
+                                <p class="detail-category">• FOOD & DRINK</p>
+                            </div>
+                        </div>
+                        <p class="detail-desc">Mobile ordering and payment platform with integrated rewards program and personalized recommendations.</p>
+                        <div class="detail-metrics">
+                            <span class="metric">⭐ 4.9</span>
+                            <span class="metric">100M+ Downloads</span>
+                            <span class="metric">iOS Engineer</span>
+                        </div>
+                        <div class="detail-tags">
+                            <span>Swift</span>
+                            <span>Mobile Payments</span>
+                            <span>Rewards Platform</span>
+                            <span>Location Services</span>
+                        </div>
+                        <a href="https://apps.apple.com/app/starbucks/id331177714" target="_blank" class="detail-app-store-btn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 22C7.79 22.05 6.8 20.68 5.96 19.47C4.25 17 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5M13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/>
+                            </svg>
+                            View on App Store
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Viya Mockup -->
+                <div class="phone-mockup-card" style="background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);">
+                    <div class="mockup-banner">
+                        <div class="banner-content">
+                            <h2>Viya</h2>
+                            <p>Social shopping and live streaming commerce platform</p>
+                        </div>
+                        <div class="phone-stack">
+                            <div class="phone-mockup phone-left">
+                                <img src="images/apps/viya/screenshot-1.jpg" alt="Viya Screenshot 1">
+                            </div>
+                            <div class="phone-mockup phone-center">
+                                <img src="images/apps/viya/screenshot-2.jpg" alt="Viya Screenshot 2">
+                            </div>
+                            <div class="phone-mockup phone-right">
+                                <img src="images/apps/viya/screenshot-3.jpg" alt="Viya Screenshot 3">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mockup-details">
+                        <div class="detail-header-with-logo">
+                            <img src="https://logo.clearbit.com/viya.com" alt="Viya" class="company-logo" onerror="this.style.display='none'">
+                            <div>
+                                <h3>Viya</h3>
+                                <p class="detail-category">• SHOPPING</p>
+                            </div>
+                        </div>
+                        <p class="detail-desc">Interactive live shopping experience combining social features with real-time product demonstrations.</p>
+                        <div class="detail-metrics">
+                            <span class="metric">⭐ 4.6</span>
+                            <span class="metric">5M+ Users</span>
+                            <span class="metric">iOS Engineer</span>
+                        </div>
+                        <div class="detail-tags">
+                            <span>Swift</span>
+                            <span>Live Streaming</span>
+                            <span>Social Commerce</span>
+                            <span>Real-time Chat</span>
+                        </div>
+                        <a href="#" target="_blank" class="detail-app-store-btn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 22C7.79 22.05 6.8 20.68 5.96 19.47C4.25 17 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5M13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/>
+                            </svg>
+                            View on App Store
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Technical Expertise</span>
+                <h2 class="section-title">Skills & Technologies</h2>
+            </div>
+
+            <div class="skills-grid">
+                <!-- iOS Development -->
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-name">Swift / iOS</span>
+                        <span class="skill-percentage">95%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="95"></div>
+                    </div>
+                </div>
+
+                <!-- SwiftUI -->
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-name">SwiftUI</span>
+                        <span class="skill-percentage">90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="90"></div>
+                    </div>
+                </div>
+
+                <!-- Architecture -->
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-name">MVVM / Clean Architecture</span>
+                        <span class="skill-percentage">90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="90"></div>
+                    </div>
+                </div>
+
+                <!-- Git -->
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-name">Git & GitHub</span>
+                        <span class="skill-percentage">85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="85"></div>
+                    </div>
+                </div>
+
+                <!-- Core Data -->
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-name">Core Data / Realm</span>
+                        <span class="skill-percentage">80%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="80"></div>
+                    </div>
+                </div>
+
+                <!-- CI/CD -->
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-name">CI/CD (Fastlane, Jenkins)</span>
+                        <span class="skill-percentage">75%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="75"></div>
+                    </div>
+                </div>
+
+                <!-- AI-Assisted Development -->
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-name">AI Coding (Claude, Cursor AI)</span>
+                        <span class="skill-percentage">95%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="95"></div>
+                    </div>
+                </div>
+
+                <!-- REST APIs -->
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-name">REST APIs & Networking</span>
+                        <span class="skill-percentage">90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="90"></div>
+                    </div>
+                </div>
+
+                <!-- Unit Testing -->
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-name">Unit Testing (XCTest)</span>
+                        <span class="skill-percentage">80%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="80"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Experience Section -->
     <section id="experience" class="experience section">
         <div class="container">
@@ -144,21 +582,98 @@
             <div class="experience-content">
                 <div class="timeline">
                     <div class="timeline-item">
-                        <div class="timeline-marker"></div>
+                        <div class="timeline-marker">
+                            <div class="marker-pulse"></div>
+                        </div>
                         <div class="timeline-content">
-                            <span class="timeline-date">April 2025 - Present</span>
-                            <h3>Senior Software Engineer</h3>
-                            <h4>Verizon</h4>
-                            <ul>
-                                <li>Leading the development team for Verizon Protect App</li>
-                                <li>Architecting scalable iOS solutions for millions of users</li>
-                                <li>Implementing advanced security features and performance optimizations</li>
-                            </ul>
-                            <div class="tech-tags">
-                                <span>Swift</span>
-                                <span>SwiftUI</span>
-                                <span>MVVM</span>
-                                <span>CI/CD</span>
+                            <div class="experience-card">
+                                <div class="experience-badge current">Current</div>
+                                <span class="timeline-date">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                                    </svg>
+                                    April 2025 - Present
+                                </span>
+                                <div class="experience-header">
+                                    <div class="experience-logo-container">
+                                        <img src="https://logo.clearbit.com/verizon.com" alt="Verizon" class="experience-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                        <div class="logo-fallback" style="display:none;">V</div>
+                                    </div>
+                                    <div>
+                                        <h3>Senior Software Engineer</h3>
+                                        <h4>Verizon</h4>
+                                        <span class="experience-location">
+                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                                <circle cx="12" cy="10" r="3"></circle>
+                                            </svg>
+                                            Remote
+                                        </span>
+                                    </div>
+                                </div>
+                                <ul class="experience-achievements">
+                                    <li>
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg>
+                                        Leading the development team for Verizon Protect App with 2M+ users
+                                    </li>
+                                    <li>
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg>
+                                        Architected a resilient hybrid AI layer that seamlessly switches between lightweight on-device models and powerful cloud LLMs (Gemini/GPT-4o) based on task complexity
+                                    </li>
+                                    <li>
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg>
+                                        Improved perceived latency by 40% by implementing AsyncThrowingStream to render generative text token-by-token (streaming) rather than awaiting full response completion
+                                    </li>
+                                    <li>
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg>
+                                        Built a Retrieval-Augmented Generation (RAG) system on mobile using SQLite with vector extensions, allowing the AI to answer queries based on the user's private, local data
+                                    </li>
+                                    <li>
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg>
+                                        Implemented Agentic workflows using LLM Function Calling, enabling the AI to autonomously execute complex Swift functions based on natural language user requests
+                                    </li>
+                                    <li>
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg>
+                                        Increased app performance by 35% through advanced memory management and optimization of concurrent operations using Swift Concurrency
+                                    </li>
+                                    <li>
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg>
+                                        Reduced crash rate by 60% through comprehensive error handling, crash analytics integration, and proactive bug fixing
+                                    </li>
+                                    <li>
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg>
+                                        Mentored 3 junior developers on iOS best practices, Swift design patterns, and modern app architecture
+                                    </li>
+                                </ul>
+                                <div class="tech-tags">
+                                    <span>Swift 6</span>
+                                    <span>SwiftUI</span>
+                                    <span>Async/Await</span>
+                                    <span>RAG</span>
+                                    <span>LLM Integration</span>
+                                    <span>Vector DB</span>
+                                    <span>Apple Intelligence</span>
+                                    <span>Core ML</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -166,21 +681,84 @@
                     <div class="timeline-item">
                         <div class="timeline-marker"></div>
                         <div class="timeline-content">
-                            <span class="timeline-date">January 2022 - April 2025</span>
-                            <h3>Software Engineer</h3>
-                            <h4>Siemens</h4>
-                            <ul>
-                                <li>Developed multi-lingual, distributed SDKs for 8 brands and 26 white-label apps</li>
-                                <li>Built consent, BLE framework, and encryption SDK for enhanced security</li>
-                                <li>Created standalone AR app (IX Demo) integrating Unity framework for Signia Hearing Aid devices</li>
-                                <li>Led app facelift initiative that increased App Store rating to 4.4</li>
-                            </ul>
-                            <div class="tech-tags">
-                                <span>Swift</span>
-                                <span>ARKit</span>
-                                <span>Core Bluetooth</span>
-                                <span>Unity</span>
-                                <span>SDK Development</span>
+                            <div class="experience-card">
+                                <span class="timeline-date">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                                    </svg>
+                                    January 2022 - April 2025
+                                </span>
+                                <div class="experience-header">
+                                    <div class="experience-logo-container">
+                                        <img src="https://logo.clearbit.com/siemens.com" alt="Siemens" class="experience-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                        <div class="logo-fallback" style="display:none;">S</div>
+                                    </div>
+                                    <div>
+                                        <h3>Software Engineer</h3>
+                                        <h4>Siemens</h4>
+                                        <span class="experience-location">
+                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                                <circle cx="12" cy="10" r="3"></circle>
+                                            </svg>
+                                            Singapore
+                                        </span>
+                                    </div>
+                                </div>
+                                <ul class="experience-achievements">
+                                    <li>
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg>
+                                        Developed multi-lingual, distributed SDKs for 8 brands and 26 white-label apps
+                                    </li>
+                                    <li>
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg>
+                                        Built consent, BLE framework, and encryption SDK for enhanced security
+                                    </li>
+                                    <li>
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg>
+                                        Created standalone AR app (IX Demo) integrating Unity framework for Signia Hearing Aid devices
+                                    </li>
+                                    <li>
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg>
+                                        Led app facelift initiative that increased App Store rating to 4.4
+                                    </li>
+                                    <li>
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg>
+                                        Designed and implemented secure encryption SDK handling sensitive user data across 26 white-label applications
+                                    </li>
+                                    <li>
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg>
+                                        Reduced SDK integration time by 50% through comprehensive documentation and automated testing frameworks
+                                    </li>
+                                    <li>
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg>
+                                        Collaborated with cross-functional teams across 5 countries to deliver features on tight deadlines
+                                    </li>
+                                </ul>
+                                <div class="tech-tags">
+                                    <span>Swift</span>
+                                    <span>ARKit</span>
+                                    <span>Core Bluetooth</span>
+                                    <span>Unity</span>
+                                    <span>SDK Development</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -188,282 +766,94 @@
                     <div class="timeline-item">
                         <div class="timeline-marker"></div>
                         <div class="timeline-content">
-                            <span class="timeline-date">February 2019 - December 2021</span>
-                            <h3>iOS Developer</h3>
-                            <h4>TechTree IT System Pvt Ltd</h4>
-                            <ul>
-                                <li>Led and managed 2 projects simultaneously with a team of 4 members</li>
-                                <li>Developed iOS app with 500K downloads in first 6 months, driving 25% revenue increase</li>
-                                <li>Managed application lifecycle for 3 major versions, achieving 4.8★ App Store rating</li>
-                                <li>Optimized performance: 50% faster load times, 70% fewer crashes</li>
-                                <li>Achieved 92% pass rate on first-time code reviews through comprehensive testing</li>
-                            </ul>
-                            <div class="tech-tags">
-                                <span>Swift</span>
-                                <span>UIKit</span>
-                                <span>Core Data</span>
-                                <span>Alamofire</span>
-                                <span>APNS</span>
+                            <div class="experience-card">
+                                <span class="timeline-date">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                                    </svg>
+                                    February 2019 - December 2021
+                                </span>
+                                <div class="experience-header">
+                                    <div class="experience-logo-container">
+                                        <img src="https://logo.clearbit.com/techtreeit.com" alt="TechTree IT" class="experience-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                        <div class="logo-fallback" style="display:none;">T</div>
+                                    </div>
+                                    <div>
+                                        <h3>iOS Developer</h3>
+                                        <h4>TechTree IT System Pvt Ltd</h4>
+                                        <span class="experience-location">
+                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                                <circle cx="12" cy="10" r="3"></circle>
+                                            </svg>
+                                            India
+                                        </span>
+                                    </div>
+                                </div>
+                                <ul class="experience-achievements">
+                                    <li>
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg>
+                                        Led and managed 2 projects simultaneously with a team of 4 members
+                                    </li>
+                                    <li>
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg>
+                                        Developed iOS app with 500K downloads in first 6 months, driving 25% revenue increase
+                                    </li>
+                                    <li>
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg>
+                                        Managed application lifecycle for 3 major versions, achieving 4.8★ App Store rating
+                                    </li>
+                                    <li>
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg>
+                                        Optimized performance: 50% faster load times, 70% fewer crashes
+                                    </li>
+                                    <li>
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg>
+                                        Achieved 92% pass rate on first-time code reviews through comprehensive testing
+                                    </li>
+                                    <li>
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg>
+                                        Implemented push notifications and real-time data sync improving user engagement by 40%
+                                    </li>
+                                    <li>
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg>
+                                        Built reusable UI component library that accelerated development time by 30% across multiple projects
+                                    </li>
+                                    <li>
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg>
+                                        Successfully delivered 5 client projects on time with zero critical post-launch bugs
+                                    </li>
+                                </ul>
+                                <div class="tech-tags">
+                                    <span>Swift</span>
+                                    <span>UIKit</span>
+                                    <span>Core Data</span>
+                                    <span>Alamofire</span>
+                                    <span>APNS</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Featured Projects</span>
-                <h2 class="section-title">Applications that make a difference</h2>
-            </div>
-
-            <div class="projects-content">
-                <!-- Hero Featured Apps Grid -->
-                <div class="hero-apps-grid">
-                    <!-- Verizon Protect -->
-                    <div class="hero-app-card">
-                        <div class="hero-app-image">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/4e/50/70/4e5070c8-6eda-6ff6-ebd7-f6f26ba90a6b/d2b6c45d-c597-4fca-9e33-b6cee61dd6c7_ios_5.png/460x0w.webp" alt="Verizon Protect Screenshot" class="app-screenshot">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/45/8a/8e/458a8e38-2e56-e460-25ae-254f977a15dd/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/230x0w.webp" alt="Verizon Protect" class="floating-app-icon">
-                        </div>
-                        <div class="hero-app-content">
-                            <h3>Verizon Protect</h3>
-                            <p class="app-category">Security & VPN</p>
-                            <p class="app-desc">Enterprise-grade security suite with VPN protection, dark web monitoring, and identity restoration for 2M+ users.</p>
-                            <div class="app-metrics">
-                                <span class="metric">⭐ 4.7</span>
-                                <span class="metric">43.8K Reviews</span>
-                                <span class="metric">Senior iOS Engineer</span>
-                            </div>
-                            <div class="app-tags">
-                                <span>Swift</span>
-                                <span>SwiftUI</span>
-                                <span>Network Extension</span>
-                                <span>MVVM</span>
-                            </div>
-                            <a href="https://apps.apple.com/us/app/verizon-protect/id1453880000" target="_blank" class="app-store-btn">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 22C7.79 22.05 6.8 20.68 5.96 19.47C4.25 17 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5M13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/>
-                                </svg>
-                                View on App Store
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Hear.com Horizon -->
-                    <div class="hero-app-card">
-                        <div class="hero-app-image">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/c0/76/c9/c076c927-8b05-9e85-c23f-c1e46eb92382/0c8a0ca7-fc1c-4f1f-bfd0-c1b49f08b6f4_iOS_5.5__screen_1.png/460x0w.webp" alt="Hear.com Horizon Screenshot" class="app-screenshot">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a4/6a/24/a46a24ed-5f17-e7ff-67ac-0f868e18ceb5/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/230x0w.webp" alt="Hear.com Horizon" class="floating-app-icon">
-                        </div>
-                        <div class="hero-app-content">
-                            <h3>Hear.com Horizon</h3>
-                            <p class="app-category">Medical & Health</p>
-                            <p class="app-desc">Control Horizon hearing aids with personalized sound adjustments, TeleCare support, and health tracking integration.</p>
-                            <div class="app-metrics">
-                                <span class="metric">⭐ 4.3</span>
-                                <span class="metric">Medical Device</span>
-                                <span class="metric">iOS Engineer</span>
-                            </div>
-                            <div class="app-tags">
-                                <span>Swift</span>
-                                <span>Core Bluetooth</span>
-                                <span>HealthKit</span>
-                                <span>SDK</span>
-                            </div>
-                            <a href="https://apps.apple.com/us/app/hear-com-horizon/id1489152822" target="_blank" class="app-store-btn">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 22C7.79 22.05 6.8 20.68 5.96 19.47C4.25 17 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5M13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/>
-                                </svg>
-                                View on App Store
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Viya -->
-                    <div class="hero-app-card">
-                        <div class="hero-app-image">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/88/ee/92/88ee9264-e23a-0ba6-64d9-6c2e9e4d3cd0/d3f60ce7-87ea-4ec4-8c53-d6e1fcf1ae86_iOS_6.5__screen_1.png/460x0w.webp" alt="Viya Screenshot" class="app-screenshot">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/2b/7e/2a/2b7e2a06-d583-c693-0df5-7fccf8ab5879/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/230x0w.webp" alt="Viya" class="floating-app-icon">
-                        </div>
-                        <div class="hero-app-content">
-                            <h3>Viya</h3>
-                            <p class="app-category">Lifestyle & Rewards</p>
-                            <p class="app-desc">Dubai's premier lifestyle rewards app with access to 40+ partner brands across restaurants, golf courses, and beaches.</p>
-                            <div class="app-metrics">
-                                <span class="metric">⭐ 4.9</span>
-                                <span class="metric">1.5M+ Downloads</span>
-                                <span class="metric">iOS Developer</span>
-                            </div>
-                            <div class="app-tags">
-                                <span>Swift</span>
-                                <span>SwiftUI</span>
-                                <span>Firebase</span>
-                                <span>Rewards</span>
-                            </div>
-                            <a href="https://apps.apple.com/in/app/viya/id1496968726" target="_blank" class="app-store-btn">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 22C7.79 22.05 6.8 20.68 5.96 19.47C4.25 17 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5M13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/>
-                                </svg>
-                                View on App Store
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Club Apparel -->
-                    <div class="hero-app-card">
-                        <div class="hero-app-image">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/ba/1e/8f/ba1e8fa6-4df0-5d17-92b2-ba90bbb4ad07/7dcdc7cd-a0e7-4fb8-8eca-fe6e988c7bd6_Simulator_Screen_Shot_-_iPhone_8_Plus_-_2023-12-13_at_13.52.06.png/460x0w.webp" alt="Club Apparel Screenshot" class="app-screenshot">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/19/0f/dd/190fddcf-525b-3b59-1ee6-1582b999888d/AppIcon-0-0-1x_U007ephone-0-1-0-85-220.jpeg/230x0w.webp" alt="Club Apparel" class="floating-app-icon">
-                        </div>
-                        <div class="hero-app-content">
-                            <h3>Club Apparel</h3>
-                            <p class="app-category">Shopping & Loyalty</p>
-                            <p class="app-desc">GCC's most rewarding loyalty program featuring 75+ brands across 1,750+ stores with personalized coupons and digital receipts.</p>
-                            <div class="app-metrics">
-                                <span class="metric">⭐ 4.7</span>
-                                <span class="metric">47K Reviews</span>
-                                <span class="metric">iOS Developer</span>
-                            </div>
-                            <div class="app-tags">
-                                <span>Swift</span>
-                                <span>MVVM</span>
-                                <span>Wallet</span>
-                                <span>QR Codes</span>
-                            </div>
-                            <a href="https://apps.apple.com/ae/app/club-apparel/id936671343" target="_blank" class="app-store-btn">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 22C7.79 22.05 6.8 20.68 5.96 19.47C4.25 17 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5M13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/>
-                                </svg>
-                                View on App Store
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Tim Hortons -->
-                    <div class="hero-app-card">
-                        <div class="hero-app-image">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/7d/e1/90/7de19093-4991-ae20-7703-af30ee1c7d93/fd5ad9e0-9998-4d3e-bd90-63f5aa1e3ff2_6.5_inch_01.png/460x0w.webp" alt="Tim Hortons Screenshot" class="app-screenshot">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/cd/b2/c6/cdb2c601-4f2f-83e3-b224-51f1ee800ff1/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/230x0w.webp" alt="Tim Hortons" class="floating-app-icon">
-                        </div>
-                        <div class="hero-app-content">
-                            <h3>Tim Hortons</h3>
-                            <p class="app-category">Food & Beverage</p>
-                            <p class="app-desc">Order ahead for pickup or delivery with Tims Rewards program, Scan & Pay technology, and Roll Up To Win contests.</p>
-                            <div class="app-metrics">
-                                <span class="metric">⭐ 4.8</span>
-                                <span class="metric">59.7K Reviews</span>
-                                <span class="metric">iOS Developer</span>
-                            </div>
-                            <div class="app-tags">
-                                <span>Swift</span>
-                                <span>Payments</span>
-                                <span>Loyalty</span>
-                                <span>Ordering</span>
-                            </div>
-                            <a href="https://apps.apple.com/us/app/tim-hortons/id1143883086" target="_blank" class="app-store-btn">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 22C7.79 22.05 6.8 20.68 5.96 19.47C4.25 17 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5M13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/>
-                                </svg>
-                                View on App Store
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Audibene -->
-                    <div class="hero-app-card">
-                        <div class="hero-app-image">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/1f/6e/c0/1f6ec0c1-9ce3-0e77-1ac0-e8a02eb54d8b/fabbe1e7-d1ae-4b1f-9f95-eabd48c41a66_iOS_5.5__screen_1.png/460x0w.webp" alt="Audibene Screenshot" class="app-screenshot">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/21/44/94/214494f6-07b4-cf9d-0597-1e3b3f9b5fe3/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/230x0w.webp" alt="Audibene" class="floating-app-icon">
-                        </div>
-                        <div class="hero-app-content">
-                            <h3>Audibene</h3>
-                            <p class="app-category">Medical & Health</p>
-                            <p class="app-desc">Comprehensive hearing aid control app with sound personalization, remote care, and multi-brand device support.</p>
-                            <div class="app-metrics">
-                                <span class="metric">⭐ 4.1</span>
-                                <span class="metric">Multi-Brand SDK</span>
-                                <span class="metric">iOS Engineer</span>
-                            </div>
-                            <div class="app-tags">
-                                <span>Swift</span>
-                                <span>Core Bluetooth</span>
-                                <span>SDK</span>
-                                <span>White-Label</span>
-                            </div>
-                            <a href="https://apps.apple.com/fr/app/audibene/id1489152944?l=en-GB" target="_blank" class="app-store-btn">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 22C7.79 22.05 6.8 20.68 5.96 19.47C4.25 17 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5M13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/>
-                                </svg>
-                                View on App Store
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Starbucks UAE -->
-                    <div class="hero-app-card">
-                        <div class="hero-app-image">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/dc/8f/4d/dc8f4d1e-7819-3401-f2dd-e41ebffd9f9d/fcc65da1-60ba-4aa7-9edb-42bc6f5de56f_01.png/460x0w.webp" alt="Starbucks UAE Screenshot" class="app-screenshot">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c5/b3/58/c5b35872-0f83-1d9e-c60d-b3dfa1c41ece/AppIcon-0-0-1x_U007emarketing-0-10-0-85-220.png/230x0w.webp" alt="Starbucks UAE" class="floating-app-icon">
-                        </div>
-                        <div class="hero-app-content">
-                            <h3>Starbucks UAE</h3>
-                            <p class="app-category">Food & Beverage</p>
-                            <p class="app-desc">Order ahead, customize drinks, earn Stars rewards, and pay seamlessly at Starbucks stores across the UAE.</p>
-                            <div class="app-metrics">
-                                <span class="metric">⭐ 4.6</span>
-                                <span class="metric">Popular App</span>
-                                <span class="metric">iOS Developer</span>
-                            </div>
-                            <div class="app-tags">
-                                <span>Swift</span>
-                                <span>Payments</span>
-                                <span>Loyalty</span>
-                                <span>Custom Orders</span>
-                            </div>
-                            <a href="https://apps.apple.com/ae/app/starbucks-uae/id1578342849" target="_blank" class="app-store-btn">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 22C7.79 22.05 6.8 20.68 5.96 19.47C4.25 17 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5M13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/>
-                                </svg>
-                                View on App Store
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Verizon Cloud -->
-                    <div class="hero-app-card">
-                        <div class="hero-app-image">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/f9/e5/ae/f9e5aefd-1a0e-aee8-a18f-55ac44fe5bb9/7e22f2d3-a0ec-4701-a04e-f063af46dcb2_iOS_6.5__screen_1.jpg/460x0w.webp" alt="Verizon Cloud Screenshot" class="app-screenshot">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/b2/ca/49/b2ca49fa-886b-abc1-8bee-b5d40829543f/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220-0.png/230x0w.webp" alt="Verizon Cloud" class="floating-app-icon">
-                        </div>
-                        <div class="hero-app-content">
-                            <h3>Verizon Cloud</h3>
-                            <p class="app-category">Cloud Storage</p>
-                            <p class="app-desc">Secure cloud backup and storage for photos, videos, and documents with custom editing tools and family sharing.</p>
-                            <div class="app-metrics">
-                                <span class="metric">⭐ 4.6</span>
-                                <span class="metric">142K Reviews</span>
-                                <span class="metric">Senior iOS Engineer</span>
-                            </div>
-                            <div class="app-tags">
-                                <span>Swift</span>
-                                <span>Cloud Storage</span>
-                                <span>Photos</span>
-                                <span>Sync</span>
-                            </div>
-                            <a href="https://apps.apple.com/us/app/verizon-cloud/id645682444" target="_blank" class="app-store-btn">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 22C7.79 22.05 6.8 20.68 5.96 19.47C4.25 17 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5M13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/>
-                                </svg>
-                                View on App Store
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
@@ -488,6 +878,171 @@
                 </a>
             </div>
         </div>
+    </section>
+
+    <!-- Skills Icons Section -->
+    <section id="skills-icons" class="skills-showcase section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">MY SKILLS</span>
+                <h2 class="section-title">
+                    The Secret <span class="italic-text">Sauce</span>
+                </h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-icon-card">
+                    <img src="https://cdn.simpleicons.org/swift/F05138" alt="Swift">
+                </div>
+                <div class="skill-icon-card">
+                    <img src="https://cdn.simpleicons.org/apple/FFFFFF" alt="iOS">
+                </div>
+                <div class="skill-icon-card">
+                    <img src="https://cdn.simpleicons.org/xcode/147EFB" alt="Xcode">
+                </div>
+                <div class="skill-icon-card">
+                    <img src="https://cdn.simpleicons.org/firebase/FFCA28" alt="Firebase">
+                </div>
+                <div class="skill-icon-card">
+                    <img src="https://cdn.simpleicons.org/git/F05032" alt="Git">
+                </div>
+                <div class="skill-icon-card">
+                    <img src="https://cdn.simpleicons.org/github/181717" alt="GitHub">
+                </div>
+                <div class="skill-icon-card">
+                    <img src="https://cdn.simpleicons.org/figma/F24E1E" alt="Figma">
+                </div>
+                <div class="skill-icon-card">
+                    <img src="https://cdn.simpleicons.org/postman/FF6C37" alt="Postman">
+                </div>
+                <div class="skill-icon-card">
+                    <img src="https://cdn.simpleicons.org/json/FFFFFF" alt="JSON">
+                </div>
+                <div class="skill-icon-card">
+                    <img src="https://cdn.simpleicons.org/restapi/009688" alt="REST API">
+                </div>
+                <div class="skill-icon-card">
+                    <img src="https://cdn.simpleicons.org/sqlite/003B57" alt="SQLite">
+                </div>
+                <div class="skill-icon-card">
+                    <img src="https://cdn.simpleicons.org/graphql/E10098" alt="GraphQL">
+                </div>
+                <div class="skill-icon-card">
+                    <img src="https://cdn.simpleicons.org/amazonaws/FF9900" alt="AWS">
+                </div>
+                <div class="skill-icon-card">
+                    <img src="https://cdn.simpleicons.org/docker/2496ED" alt="Docker">
+                </div>
+                <div class="skill-icon-card">
+                    <img src="https://cdn.simpleicons.org/jenkins/D24939" alt="Jenkins">
+                </div>
+                <div class="skill-icon-card">
+                    <img src="https://cdn.simpleicons.org/jira/0052CC" alt="Jira">
+                </div>
+                <div class="skill-icon-card">
+                    <img src="https://cdn.simpleicons.org/slack/4A154B" alt="Slack">
+                </div>
+                <div class="skill-icon-card">
+                    <img src="https://cdn.simpleicons.org/testflight/0D96F6" alt="TestFlight">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">TESTIMONIALS</span>
+                <h2 class="section-title">
+                    Word on the street <span class="italic-text">about me</span>
+                </h2>
+            </div>
+        </div>
+        <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <h3 class="testimonial-title">Outstanding Technical Leadership and Innovation</h3>
+                    <p class="testimonial-text">
+                        Nilesh's technical expertise and leadership have been exceptional. His ability to architect scalable solutions while mentoring the team has significantly elevated our iOS development standards. His deep understanding of frameworks and performance optimization is remarkable.
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="https://ui-avatars.com/api/?name=Renuka+Betageri&background=6366f1&color=fff" alt="Renuka Betageri" class="author-avatar">
+                        <div class="author-info">
+                            <div class="author-name">Renuka Betageri</div>
+                            <div class="author-role">Software Product Management • Siemens</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <h3 class="testimonial-title">Exceptional SDK Development and Quality Standards</h3>
+                    <p class="testimonial-text">
+                        Working with Nilesh at Siemens was transformative. His multi-lingual distributed SDK architecture was brilliant. The BLE framework and encryption SDK he built set new security standards. His attention to code quality and technical excellence is outstanding.
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="https://ui-avatars.com/api/?name=Harish+K&background=6366f1&color=fff" alt="Harish K" class="author-avatar">
+                        <div class="author-info">
+                            <div class="author-name">Harish K</div>
+                            <div class="author-role">Senior Software Engineer • Siemens</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <h3 class="testimonial-title">Transformed App Quality and User Experience</h3>
+                    <p class="testimonial-text">
+                        Nilesh made an immediate impact at Siemens. He led initiatives that dramatically improved our app quality and increased App Store ratings. His technical expertise combined with product thinking made him invaluable to our team.
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="https://ui-avatars.com/api/?name=Axel+Horndasch&background=6366f1&color=fff" alt="Axel Horndasch" class="author-avatar">
+                        <div class="author-info">
+                            <div class="author-name">Axel Horndasch</div>
+                            <div class="author-role">Team Manager • WSAudiology</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <h3 class="testimonial-title">Exceptional iOS Architecture and Leadership</h3>
+                    <p class="testimonial-text">
+                        Nilesh's iOS development skills are top-tier. His work on complex features, SDK development, and architectural decisions consistently exceeded expectations. He brings both technical depth and collaborative leadership to every project.
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="https://ui-avatars.com/api/?name=Marko+Lugger&background=6366f1&color=fff" alt="Marko Lugger" class="author-avatar">
+                        <div class="author-info">
+                            <div class="author-name">Marko Lugger</div>
+                            <div class="author-role">R&D Engineer Audio Signal Processing • WSAudiology</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <h3 class="testimonial-title">Delivered Outstanding Results and Innovation</h3>
+                    <p class="testimonial-text">
+                        Working with Nilesh has been exceptional. His ability to deliver high-quality iOS solutions, optimize performance, and innovate with new technologies consistently impressed our entire team. A true iOS expert.
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="https://ui-avatars.com/api/?name=Nibin+Varghese&background=6366f1&color=fff" alt="Nibin Varghese" class="author-avatar">
+                        <div class="author-info">
+                            <div class="author-name">Nibin Varghese</div>
+                            <div class="author-role">Android Developer • Deloitte USI</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <h3 class="testimonial-title">Exemplary Technical Skills and Team Collaboration</h3>
+                    <p class="testimonial-text">
+                        Nilesh consistently delivered exceptional iOS solutions. His technical expertise, problem-solving abilities, and collaborative approach made him a key contributor. His work ethic and quality standards are exemplary.
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="https://ui-avatars.com/api/?name=Sanat+Kagwad&background=6366f1&color=fff" alt="Sanat Kagwad" class="author-avatar">
+                        <div class="author-info">
+                            <div class="author-name">Sanat Kagwad</div>
+                            <div class="author-role">Business Head • Reciproci</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </section>
 
     <!-- Contact Section -->
@@ -562,8 +1117,8 @@
                 <div class="footer-links">
                     <a href="#home">Home</a>
                     <a href="#about">About</a>
-                    <a href="#experience">Experience</a>
                     <a href="#projects">Projects</a>
+                    <a href="#experience">Experience</a>
                     <a href="#blog">Blog</a>
                     <a href="#contact">Contact</a>
                 </div>

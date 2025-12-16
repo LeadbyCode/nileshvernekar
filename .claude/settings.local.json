@@ -10,7 +10,12 @@
       "Bash(open http://localhost:8000)",
       "Bash(ls:*)",
       "Bash(git reset:*)",
-      "Bash(open http://localhost:8080)"
+      "Bash(open http://localhost:8080)",
+      "Bash(open:*)",
+      "Bash(sips:*)",
+      "Bash(done)",
+      "Bash(xargs:*)",
+      "Bash(awk:*)"
     ]
   }
 }
