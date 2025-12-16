@@ -160,24 +160,6 @@ if (copyEmailBtn) {
     });
 }
 
-// Work Tabs Functionality
-const tabBtns = document.querySelectorAll('.tab-btn');
-const tabContents = document.querySelectorAll('.tab-content');
-
-tabBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-        const targetTab = btn.getAttribute('data-tab');
-
-        // Remove active class from all buttons and contents
-        tabBtns.forEach(b => b.classList.remove('active'));
-        tabContents.forEach(c => c.classList.remove('active'));
-
-        // Add active class to clicked button and corresponding content
-        btn.classList.add('active');
-        document.getElementById(targetTab).classList.add('active');
-    });
-});
-
 // Intersection Observer for fade-in animations
 const observerOptions = {
     threshold: 0.1,
@@ -194,7 +176,7 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe all sections and cards
-document.querySelectorAll('.section, .project-card, .highlight-card, .timeline-item').forEach(el => {
+document.querySelectorAll('.section, .project-card, .hero-app-card, .highlight-card, .timeline-item').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
