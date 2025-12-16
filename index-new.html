@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nilesh Vernekar - iOS Developer</title>
+    <meta name="description" content="Seasoned iOS Developer with 6+ years of experience in Swift, SwiftUI, and mobile app development.">
+    <link rel="stylesheet" href="styles-new.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Background gradient -->
+    <div class="bg-gradient"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">NV</a>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#work" class="nav-link">Work</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <!-- Hero Grid -->
+        <section class="hero-grid">
+            <!-- Collaboration Card -->
+            <div class="card collab-card">
+                <div class="card-label">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                    <span>COLLABORATION</span>
+                </div>
+                <div class="collab-visual">
+                    <div class="circle-outline"></div>
+                    <div class="circle-outline">
+                        <img src="images/profile.jpg" alt="Nilesh Vernekar" class="profile-circle">
+                    </div>
+                    <div class="circle-outline"></div>
+                </div>
+                <p class="collab-text">I prioritize client collaboration, fostering open communication</p>
+            </div>
+
+            <!-- Tech Stack Card -->
+            <div class="card tech-stack-card">
+                <h3 class="card-title">Passionate about cutting-edge<br>technologies</h3>
+                <div class="tech-badges">
+                    <div class="tech-badge">
+                        <span class="tech-icon">🔴</span>
+                        <span>Swift</span>
+                    </div>
+                    <div class="tech-badge">
+                        <span class="tech-icon">⚛️</span>
+                        <span>SwiftUI</span>
+                    </div>
+                    <div class="tech-badge">
+                        <span class="tech-icon">▲</span>
+                        <span>UIKit</span>
+                    </div>
+                    <div class="tech-badge">
+                        <span class="tech-icon">💙</span>
+                        <span>iOS SDK</span>
+                    </div>
+                    <div class="tech-badge">
+                        <span class="tech-icon">📦</span>
+                        <span>Xcode</span>
+                    </div>
+                    <div class="tech-badge">
+                        <span class="tech-icon">🌐</span>
+                        <span>ARKit</span>
+                    </div>
+                    <div class="tech-badge">
+                        <span class="tech-icon">🐘</span>
+                        <span>Core Data</span>
+                    </div>
+                    <div class="tech-badge">
+                        <span class="tech-icon">⚡</span>
+                        <span>GitHub Actions</span>
+                    </div>
+                    <div class="tech-badge">
+                        <span class="tech-icon">▲</span>
+                        <span>Firebase</span>
+                    </div>
+                    <div class="tech-badge">
+                        <span class="tech-icon">🐳</span>
+                        <span>Fastlane</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timezone Card -->
+            <div class="card timezone-card">
+                <h3 class="timezone-title">I'm very flexible with time<br>zone communications</h3>
+                <div class="timezone-flags">
+                    <div class="flag-item">
+                        <span class="flag">🇬🇧</span>
+                        <span class="flag-name">UK</span>
+                    </div>
+                    <div class="flag-item">
+                        <span class="flag">🇮🇳</span>
+                        <span class="flag-name">India</span>
+                    </div>
+                    <div class="flag-item">
+                        <span class="flag">🇺🇸</span>
+                        <span class="flag-name">USA</span>
+                    </div>
+                </div>
+                <div class="globe-wrapper">
+                    <canvas id="globeCanvas" width="400" height="400"></canvas>
+                    <div class="remote-badge">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <span>REMOTE</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Card -->
+            <div class="card contact-card">
+                <h3 class="contact-title">Let's work together<br>on your next project</h3>
+                <button class="email-button" id="emailBtn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>nilesh.vernekar11@gmail.com</span>
+                </button>
+            </div>
+
+            <!-- Portfolio Preview Card -->
+            <div class="card portfolio-preview-card">
+                <div class="browser-chrome">
+                    <div class="browser-toolbar">
+                        <div class="traffic-lights">
+                            <span class="light red"></span>
+                            <span class="light yellow"></span>
+                            <span class="light green"></span>
+                        </div>
+                        <div class="url-bar">nileshvernekar.in</div>
+                    </div>
+                    <div class="browser-viewport">
+                        <h2 class="viewport-title">Apps that<br><span class="highlight-text">impact.</span></h2>
+                        <div class="viewport-actions">
+                            <button class="action-btn primary">Start</button>
+                            <button class="action-btn secondary">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Services Card -->
+            <div class="card services-card">
+                <div class="services-grid">
+                    <div class="service-box">
+                        <div class="service-icon">💳</div>
+                        <h4 class="service-name">Payment System<br>Architecture</h4>
+                        <p class="service-desc">Building Scalable<br>iOS Apps</p>
+                    </div>
+                    <div class="service-box">
+                        <div class="service-icon">📊</div>
+                        <h4 class="service-name">Monitoring &<br>Analytics Infrastructure</h4>
+                        <p class="service-desc">Performance<br>Insights</p>
+                    </div>
+                    <div class="service-box">
+                        <div class="service-icon">🎨</div>
+                        <h4 class="service-name">Design System<br>& UI Consistency</h4>
+                        <p class="service-desc">Unified Design<br>Language</p>
+                    </div>
+                    <div class="service-box">
+                        <div class="service-icon">📱</div>
+                        <h4 class="service-name">API Gateway &<br>Documentation</h4>
+                        <p class="service-desc">Clear API<br>Contracts</p>
+                    </div>
+                    <div class="service-box">
+                        <div class="service-icon">🔄</div>
+                        <h4 class="service-name">User Onboarding<br>Flow Design</h4>
+                        <p class="service-desc">Key to<br>Retention</p>
+                    </div>
+                    <div class="service-box">
+                        <div class="service-icon">🌐</div>
+                        <h4 class="service-name">Mobile App<br>Landing Page</h4>
+                        <p class="service-desc">First<br>Impressions</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scoop Card -->
+            <div class="card scoop-card">
+                <div class="scoop-icon-wrapper">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="3" y1="9" x2="21" y2="9"></line>
+                        <line x1="9" y1="21" x2="9" y2="9"></line>
+                    </svg>
+                </div>
+                <p class="scoop-text">THE INSIDE SCOOP</p>
+            </div>
+        </section>
+
+        <!-- Work Section -->
+        <section id="work" class="work-section">
+            <div class="section-header-modern">
+                <span class="section-tag">FEATURED WORK</span>
+                <h2 class="section-heading">Applications that make a difference</h2>
+            </div>
+
+            <div class="featured-apps-showcase">
+                <!-- Verizon Protect -->
+                <div class="featured-app">
+                    <div class="app-header-row">
+                        <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/45/8a/8e/458a8e38-2e56-e460-25ae-254f977a15dd/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/230x0w.webp" alt="Verizon Protect" class="app-icon-lg">
+                        <div class="app-info">
+                            <h3 class="app-name">Verizon Protect</h3>
+                            <p class="app-tagline">Enterprise Security & VPN Solution</p>
+                            <div class="app-stats-row">
+                                <span class="stat">⭐ 4.7</span>
+                                <span class="stat">43.8K Reviews</span>
+                                <span class="stat">2M+ Users</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="app-description">Comprehensive security suite providing enterprise-grade protection for millions of Verizon customers with VPN, dark web monitoring, and identity restoration.</p>
+                    <div class="app-tech-tags">
+                        <span class="tag">Swift</span>
+                        <span class="tag">SwiftUI</span>
+                        <span class="tag">Network Extension</span>
+                        <span class="tag">Security</span>
+                        <span class="tag">MVVM</span>
+                    </div>
+                    <a href="https://apps.apple.com/us/app/verizon-protect/id1453880000" target="_blank" class="app-link">View on App Store →</a>
+                </div>
+
+                <!-- Signia App -->
+                <div class="featured-app">
+                    <div class="app-header-row">
+                        <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a1/b5/28/a1b5287c-7f47-d13e-4427-d2978f3e831d/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/230x0w.webp" alt="Signia App" class="app-icon-lg">
+                        <div class="app-info">
+                            <h3 class="app-name">Signia App</h3>
+                            <p class="app-tagline">Medical Device & AR Integration</p>
+                            <div class="app-stats-row">
+                                <span class="stat">⭐ 4.2</span>
+                                <span class="stat">13.6K Reviews</span>
+                                <span class="stat">AR Powered</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="app-description">Medical application controlling Signia hearing aids with AR-powered device fitting, TeleCare connectivity, and Unity framework integration.</p>
+                    <div class="app-tech-tags">
+                        <span class="tag">Swift</span>
+                        <span class="tag">ARKit</span>
+                        <span class="tag">Core Bluetooth</span>
+                        <span class="tag">Unity</span>
+                        <span class="tag">HealthKit</span>
+                    </div>
+                    <a href="https://apps.apple.com/us/app/signia-app/id1316911473" target="_blank" class="app-link">View on App Store →</a>
+                </div>
+
+                <!-- Viya -->
+                <div class="featured-app">
+                    <div class="app-header-row">
+                        <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/2b/7e/2a/2b7e2a06-d583-c693-0df5-7fccf8ab5879/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/230x0w.webp" alt="Viya" class="app-icon-lg">
+                        <div class="app-info">
+                            <h3 class="app-name">Viya</h3>
+                            <p class="app-tagline">Dubai Lifestyle & Rewards</p>
+                            <div class="app-stats-row">
+                                <span class="stat">⭐ 4.9</span>
+                                <span class="stat">1.5M+ Downloads</span>
+                                <span class="stat">Top Rated</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="app-description">Dubai's premier lifestyle rewards app with access to 40+ partner brands across restaurants, leisure destinations, and private beaches.</p>
+                    <div class="app-tech-tags">
+                        <span class="tag">Swift</span>
+                        <span class="tag">SwiftUI</span>
+                        <span class="tag">Firebase</span>
+                        <span class="tag">Rewards</span>
+                        <span class="tag">Geolocation</span>
+                    </div>
+                    <a href="https://apps.apple.com/in/app/viya/id1496968726" target="_blank" class="app-link">View on App Store →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer-modern">
+            <div class="footer-content-modern">
+                <div class="footer-left">
+                    <h3 class="footer-title">Nilesh Vernekar</h3>
+                    <p class="footer-subtitle">iOS Developer crafting exceptional mobile experiences</p>
+                </div>
+                <div class="footer-right">
+                    <div class="social-links-modern">
+                        <a href="https://www.linkedin.com/in/nilesh-deepak-vernekar-32bb4a211/" target="_blank" class="social-link-modern">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="https://github.com/nileshvernekar" target="_blank" class="social-link-modern">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.3-5.467-1.332-5.467-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.627-5.373-12-12-12"/>
+                            </svg>
+                        </a>
+                        <a href="https://leadbycode.com/" target="_blank" class="social-link-modern">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom-modern">
+                <p>&copy; 2025 Nilesh Vernekar. All rights reserved.</p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script-new.js"></script>
+</body>
+</html>
