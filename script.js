@@ -217,7 +217,7 @@ const statsObserver = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             const stats = entry.target.querySelectorAll('.stat h3');
             stats.forEach((stat, index) => {
-                const values = [6, 2, 26];
+                const values = [6, 26];
                 stat.textContent = '0+';
                 setTimeout(() => {
                     animateCounter(stat, 0, values[index], 2000);
